@@ -34,6 +34,7 @@
     "gulp-watch": "^5.0.1",
     "jest": "^25.1.0",
     "jest-cli": "^25.1.0",
+    "jest-cucumber": "^2.0.11",
     "jest-transform-stub": "^2.0.0",
     "minimatch": "^3.0.4",
     "promise-polyfill": "^8.1.3",
