@@ -11,7 +11,7 @@ describe('color attribute', () => {
     }
   });
 
-  it('sets font color', done => {
+it('sets font color', done => {
     let model = {color: 'green'};
 
     component = StageComponent

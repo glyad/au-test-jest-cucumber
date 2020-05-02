@@ -71,6 +71,7 @@
     "src"
   ],
   "jest": {
+    "verbose": true,
     "moduleNameMapper": {
       "^aurelia-binding$": "<rootDir>/node_modules/aurelia-binding",
       "^.+\\.css$": "<rootDir>/test/mock-css"

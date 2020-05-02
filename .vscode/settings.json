@@ -4,7 +4,7 @@
   "html.suggest.ionic": false,
 
   "cucumberautocomplete.steps": [
-    "test/step-definitions/*.ts"
+    "test/features/step-definitions/*.ts"
   ],
   "cucumberautocomplete.syncfeatures": "test/features/*feature",
   "cucumberautocomplete.strictGherkinCompletion": true,
