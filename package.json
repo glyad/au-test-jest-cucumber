@@ -1,10 +1,10 @@
 {
   "name": "au-test-jest-cucumber",
   "description": "An Aurelia plugin project.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "repository": {
-    "type": "???",
-    "url": "???"
+    "type": "git",
+    "url": "https://github.com/glyad/au-test-jest-cucumber"
   },
   "license": "MIT",
   "devDependencies": {
@@ -23,7 +23,7 @@
     "cucumber": "^6.0.5",
     "debounce": "^1.2.0",
     "del": "^5.1.0",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
@@ -32,8 +32,8 @@
     "gulp-tslint": "^8.1.4",
     "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-watch": "^5.0.1",
-    "jest": "^25.4.0",
-    "jest-cli": "^25.4.0",
+    "jest": "^25.5.4",
+    "jest-cli": "^25.5.4",
     "jest-cucumber": "^2.0.11",
     "jest-transform-stub": "^2.0.0",
     "minimatch": "^3.0.4",
@@ -50,14 +50,13 @@
   },
   "scripts": {
     "build": "au build-plugin",
-    "jest": "jest --verbose",
+    "jest": "jest --verbose --color",
     "start": "au run",
     "watch": "au build-plugin --watch",
     "prepare": "npm run build",
     "pretest": "au lint",
     "preversion": "au test",
     "test": "au test",
-    "jj": "npm run build & npm run lint & jest --color",
     "lint": "tslint --project ./"
   },
   "engines": {

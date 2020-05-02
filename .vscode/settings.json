@@ -36,6 +36,8 @@
   "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then)\\(",
   "cucumberautocomplete.stepRegExSymbol": "'",
   "cSpell.words": [
-      "Elon"
-  ],
+    "Elon",
+    "asynciterable",
+    "esnext"
+],
 }
