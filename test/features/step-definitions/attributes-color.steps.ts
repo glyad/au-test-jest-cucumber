@@ -15,7 +15,7 @@ defineFeature(feature, test => {
     }
   });
 
-  test('It sets font color with bound value', ({
+  test('Setting color value from code is reflected in the presentation', ({
     given,
     when,
     and,
@@ -26,18 +26,18 @@ defineFeature(feature, test => {
       model.color = arg0;
     });
   
-    when(/^I have the view composed with (.*) tag$/, async (arg0) => {
+    when(/^I have the view with color binding$/, async (arg0) => {
       component = StageComponent
         .withResources('attributes/color')
         .inView(`<p color.bind="color"></p>`)
         .boundTo(model);  
     });
   
-    and(/^I set the color value to (.*)$/, async (arg0) => {
+    and(/^I set the color value to "(.*)"$/, async (arg0) => {
       model.color = arg0;
     });
   
-    then(/^I expect to see the (.*) background$/, async (arg0) => {
+    then(/^I expect to see "(.*)" background$/, async (arg0) => {
       await component.create(bootstrap).then(() => {
       
         const view = <any>component.element;
@@ -55,17 +55,17 @@ defineFeature(feature, test => {
     when,
     then
   }) => {
-    given(`I have the view composed with "p" tag`, () => {
+    given(`I have the view with color binding`, () => {
       //
     });
   
-    when(/^I set the color value to (.*)$/, async (arg0) => {
+    when(/^I set the color value to "(.*)"$/, async (arg0) => {
       component = StageComponent
         .withResources('attributes/color')
         .inView(`<p color="${arg0}"></p>`);
     });
   
-    then(/^I expect to see (.*) background$/, async (arg0) => {
+    then(/^I expect to see "(.*)" background$/, async (arg0) => {
 
       await component.create(bootstrap).then(() => {
       
