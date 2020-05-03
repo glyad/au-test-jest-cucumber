@@ -1,6 +1,7 @@
 import { defineFeature, loadFeature } from "jest-cucumber";
 import {StageComponent, ComponentTester} from 'aurelia-testing';
 import {bootstrap} from 'aurelia-bootstrapper';
+import {ColorSteps} from './color-steps';
 
 const feature = loadFeature('./test/features/attributes-color.feature');
 
@@ -37,18 +38,12 @@ defineFeature(feature, test => {
       model.color = arg0;
     });
   
-    then(/^I expect to see "(.*)" background$/, async (arg0) => {
-      await component.create(bootstrap).then(() => {
-      
-        const view = <any>component.element;
-        expect(view.style.color).toBe(arg0);
-
-      }).catch((e: any) => {
+    then(/^I expect to see "(.*)" color in the presentation$/, async (arg0) => {
+      await ColorSteps.AssertComponentColor(arg0, component).catch((e: any) => {
         fail(e);
-      });
+      })
     });
   });
-
 
   test('It sets font color with hard coded value', ({
     given,
@@ -65,16 +60,10 @@ defineFeature(feature, test => {
         .inView(`<p color="${arg0}"></p>`);
     });
   
-    then(/^I expect to see "(.*)" background$/, async (arg0) => {
-
-      await component.create(bootstrap).then(() => {
-      
-        const view = <any>component.element;
-        expect(view.style.color).toBe(arg0);
-
-      }).catch((e: any) => {
+    then(/^I expect to see "(.*)" color in the presentation$/, async (arg0) => {
+      await ColorSteps.AssertComponentColor(arg0, component).catch((e: any) => {
         fail(e);
-      });
+      })
     });
   });
 });
